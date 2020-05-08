@@ -27,6 +27,8 @@ class HomeFragment : Fragment() {
 
         instaAdapter = InstaAdapter(view.context)
         rv_home.adapter = instaAdapter
+        val gap = Decoration(10)
+        rv_home.addItemDecoration(gap)
         loadDatas()
     }
 
