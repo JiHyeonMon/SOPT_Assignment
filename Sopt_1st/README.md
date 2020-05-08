@@ -20,3 +20,12 @@ SigninActivity SignupActivity MainActivity , 총 세개의 Activity를 만들었
 
 [3,4번째 성장과제는 시험기간이 끝나고...찬찬히 해보기로한다....]
     
+
+**과제 피드백**
+
+        //코틀린 변수 바로바로 받아오기 굿-
+        var id: EditText = editId
+        var pwd: EditText = editPwd
+        
+        startActivity(intent)
+        finish()    //startActivity불러주고 종료해주기
