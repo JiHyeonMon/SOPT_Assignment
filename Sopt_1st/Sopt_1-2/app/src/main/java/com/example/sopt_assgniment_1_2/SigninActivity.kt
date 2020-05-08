@@ -1,40 +1,30 @@
 package com.example.sopt_assgniment_1_2
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_signin.*
-import kotlinx.android.synthetic.main.activity_signin.editId
-import kotlinx.android.synthetic.main.activity_signin.editPwd
-import kotlinx.android.synthetic.main.activity_signup.*
-import java.time.chrono.MinguoChronology
 
 class SigninActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
 
-        //코틀린 변수 바로바로 받아오기 굿-
-        var id: EditText = editId
-        var pwd: EditText = editPwd
-
-        Log.d("start","start")
+        Log.d("start", "start")
         //로그인 버튼 클릭 - 홈화면
         btnSignin.setOnClickListener {
-            Log.d("00","00")
+            Log.d("00", "00")
             //아이디 혹은 비밀번호 빈칸일 경우
-            if(editId.text.isNullOrBlank()||editPwd.text.isNullOrBlank()){
-                Log.d("d","d")
+            if (editId.text.isNullOrBlank() || editPwd.text.isNullOrBlank()) {
+                Log.d("d", "d")
                 Toast.makeText(this, "아이디 또는 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
             //둘 다 입력 잘되면 홈화면으로 이동
-            else{
+            else {
                 val intent = Intent(this, MainActivity::class.java)
 
                 intent.putExtra("id", editId.text.toString())
@@ -62,9 +52,9 @@ class SigninActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(resultCode == RESULT_OK && requestCode == 200){
-            val id : String? = data?.getStringExtra("id")
-            val pwd : String? = data?.getStringExtra("pwd")
+        if (resultCode == RESULT_OK && requestCode == 200) {
+            val id: String? = data?.getStringExtra("id")
+            val pwd: String? = data?.getStringExtra("pwd")
             editId.setText(id)
             editPwd.setText(pwd)
 
