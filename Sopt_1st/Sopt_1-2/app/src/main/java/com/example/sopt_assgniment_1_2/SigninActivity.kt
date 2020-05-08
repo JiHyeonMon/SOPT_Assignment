@@ -20,8 +20,9 @@ class SigninActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
 
-        var id: EditText = findViewById(R.id.editId)
-        var pwd: EditText = findViewById(R.id.editPwd)
+        //코틀린 변수 바로바로 받아오기 굿-
+        var id: EditText = editId
+        var pwd: EditText = editPwd
 
         Log.d("start","start")
         //로그인 버튼 클릭 - 홈화면
@@ -39,6 +40,7 @@ class SigninActivity : AppCompatActivity() {
                 intent.putExtra("id", editId.text.toString())
                 intent.putExtra("pwd", editPwd.text.toString())
                 startActivity(intent)
+                finish()    //startActivity불러주고 종료해주기
             }
         }
 
