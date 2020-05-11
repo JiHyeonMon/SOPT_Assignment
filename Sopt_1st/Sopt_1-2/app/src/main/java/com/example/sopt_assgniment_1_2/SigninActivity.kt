@@ -17,7 +17,6 @@ class SigninActivity : AppCompatActivity() {
         Log.d("start", "start")
         //로그인 버튼 클릭 - 홈화면
         btnSignin.setOnClickListener {
-            Log.d("00", "00")
             //아이디 혹은 비밀번호 빈칸일 경우
             if (editId.text.isNullOrBlank() || editPwd.text.isNullOrBlank()) {
                 Log.d("d", "d")
