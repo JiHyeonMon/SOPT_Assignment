@@ -1,2 +1,2 @@
-# SOPT_Assignment
-OUR SOPT 과제함
+# 3주차 과제 - Retrofit을 이용한 통신 및 지금까지의 총 망라...
+
