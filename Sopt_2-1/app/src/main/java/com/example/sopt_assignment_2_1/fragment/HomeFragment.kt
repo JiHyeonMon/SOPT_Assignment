@@ -1,10 +1,14 @@
-package com.example.sopt_assignment_2_1
+package com.example.sopt_assignment_2_1.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.sopt_assignment_2_1.Decoration
+import com.example.sopt_assignment_2_1.InstaAdapter
+import com.example.sopt_assignment_2_1.R
+import com.example.sopt_assignment_2_1.instaData
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
